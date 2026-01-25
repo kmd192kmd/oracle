@@ -50,7 +50,7 @@ from tblComedian;
 select
     100,
     to_char(100, '$999'), -- $100
-    --to_char(100, '999달러')
+    --to_char(100, '999달러'),
     to_char(100, '999') || '달러',
     to_char(100, 'L999') -- ₩100    
 from dual;

@@ -117,13 +117,13 @@ create table tblType (
     --num number(4,2) -- 4자리(정수 2자리 + 소수이하 2자리), -99.99 ~ +99.99
     --txt char(10) -- 10바이트 == 몇글자? > 인코딩(UTF-8) > 영어(1), 한글(3)
     --txt varchar2(10)    
-    
-    --txt1 char(10),
-    --txt2 varchar2(10)
+
+      txt1 char(10),
+      txt2 varchar(10)
     
     --txt nchar(10)
     
-    regdate date
+    --regdate date
 );
 
 select * from tabs; --tables. 내가 가지고 있는 테이블 목록
