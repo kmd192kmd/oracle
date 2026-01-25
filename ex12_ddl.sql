@@ -96,7 +96,7 @@ insert into tblMemo (seq, name, memo, regdate)
 insert into tblMemo (seq, name, memo, regdate) 
     values (null, null, null, null); 
 
-
+select * from tblMemo;
 
 drop table tblMemo;
 
