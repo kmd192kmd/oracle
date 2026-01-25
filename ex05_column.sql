@@ -1,7 +1,7 @@
---ex05_column.sql
+-- ex05_column.sql
 
 -- 컬럼 리스트에서 할 수 있는 행동들
--- SELECT 컬럼 리스트
+-- SELECT 컬럼리스트
 
 -- 컬럼명
 select name, jikwi, buseo from tblInsa;
@@ -19,21 +19,23 @@ select
 from tblInsa;
 
 -- 함수
-select name, length(name) from tblInsa;
+select name, length(name) from tblCountry;
+
 
 /*
+
     Java Stream > list.stream().distinct().forEach()
-    
+
     distinct
-    - 칼럼 리스트에서 사용
-    - 레코드의 중복값 제거
+    - 컬럼 리스트에서 사용
+    - 레코드의 중복값 제거    
     - distinct 컬럼명 > (X)
     - distinct 컬럼리스트 > (O)
-    
+
 */
 
 -- tblCountry. 어떤 대륙들이 있어요? > 개인? vs 그룹?
-select continent from tblCountry;
+select continent from tblCountry; --개인?
 select distinct continent from tblCountry;
 
 -- tblInsa. 어떤 부서가 있어요?
@@ -42,15 +44,15 @@ select distinct jikwi from tblInsa;
 select distinct city from tblInsa;
 select distinct name from tblInsa; --60명
 
-select distinct buseo from tblInsa; --7개
-select distinct buseo, name from tblInsa; --60명 --buseo의 중복을 제거한 것이 아니고, buseo, name 전체 행의 중복을 제거한다.
+
+select buseo, name from tblInsa;
+select distinct buseo, name from tblInsa;
 
 select buseo, jikwi from tblInsa;
-select distinct buseo, jikwi from tblInsa; --23명
-
-
+select distinct buseo, jikwi from tblInsa;
 
 /*
+
     SQL > 제어문 없음
     
     case문
@@ -64,20 +66,23 @@ select distinct buseo, jikwi from tblInsa; --23명
     언어
     1. C 계열 > 컴파일 언어
     2. Basic 계열 > 인터프리터 > 스크립트
+    
 */
 
 select
     last || first as name,
     gender,
     case 
+        --when 조건 then 값 
         when gender = 'm' then '남자'
         when gender = 'f' then '여자'
     end as genderName,
     case gender
         when 'm' then '남자'
         when 'f' then '여자'
-    end as genderName2
+    end as genderName2    
 from tblComedian;
+
 
 select
     name, continent,
@@ -86,11 +91,12 @@ select
         when continent = 'EU' then '유럽'
         when continent = 'AF' then '아프리카'
         --else '기타'
-        else continent
-        --else name --의도가 불분명
-        --else area --ORA-00932: 일관성 없는 데이터 유형: CHAR이(가) 필요하지만 NUMBER임
+        --else continent
+        --else name
+        --else area
     end as continentName
 from tblCountry;
+
 
 
 select
@@ -112,15 +118,15 @@ from tblComedian;
 
 -- 사원, 대리 > 현장직
 -- 과장, 부장 > 관리직
-select
+select 
     name, jikwi,
     case
         when jikwi = '사원' or jikwi = '대리' then '현장직'
         when jikwi = '과장' or jikwi = '부장' then '관리직'
     end,
     case
-        when jikwi in('사원', '대리') then '현장직'
-        when jikwi in('과장', '부장') then '관리직'
+        when jikwi in ('사원', '대리') then '현장직'
+        when jikwi in ('과장', '부장') then '관리직'
     end
 from tblInsa;
 
@@ -139,7 +145,11 @@ select
         when completedate is null then '미완료'
     end
 from tblTodo;
- 
+
+
+
+
+
 
 
 

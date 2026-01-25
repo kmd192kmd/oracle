@@ -99,6 +99,16 @@ select
         when population is null then 0
     end,
     nvl(population, 0),
-    nvl2(population, 1, 2)
+    nvl2(population, '인구 기재됨', '인구 기재안됨')
 from tblCountry;
+
+
+
+
+
+
+
+
+
+
 
