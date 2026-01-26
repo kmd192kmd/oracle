@@ -1,0 +1,587 @@
+Git
+- C:\code\git
+
+
+Git 프로그램 설치
+- http://git-scm.com
+
+
+Git Bash 실행하기
+- 윈도우 탐색기 > 원하는 폴더 이동
+
+
+Git 수업 내용
+
+1. Git 사용법
+    - 혼자 or 협업
+    - 버전 관리(*****)
+    - CLI(Command Line Interface) 기반 명령어(***)
+    - GUI(Graphical User Interface) 기반 프로그램 (내부 Git 기반 + UI 제공)
+        - Git Desktop
+        - SourceTree
+        - Kraken
+
+2. GitHub 사용법
+    - Git을 인터넷을 통해서 사용 가능하게 해주는 인터넷 서비스
+    - 혼자/현업 
+    - GitLab, Bitbucket 등..
+    - MS에서 인수
+
+
+
+Git
+- Vesion Control System, 버전 관리 시스템
+- 내가 원하는 시점 > 작업 중인 파일/디렉토리의 상태를 미리 저장(=버전)해놓고 > 나중에 필요 따라 이전 버전으로 되돌아갈 수 있도록 도와주는 시스템
+
+
+Vesion Control System
+1. 파일의 이름을 변경하지 않고 버전 관리를 할 수 있다.
+2. 버전 관리를 통해 이전 상태로 되돌릴 수 있다.
+3. 버전 관리 바탕 > 다른 사람과의 협업을 할 수 있다.
+
+예) 학교 + 레포트
+- 기말고사_레포트.doc > 버전(Version), 스냅샷(Snapshot) - 백업
+- 기말고사_레포트1.doc
+- 기말고사_레포트_최종.doc
+- 기말고사_레포트_진짜최종.doc
+- 기말고사_레포트_진짜최종_완결.doc
+
+예 ) 학교 + 레포틈
+- 레포트.doc + 첨부파일.zip + 스크린샷.png > 버전
+- 레포트.doc + 첨부파일_수정.zip + 스크린샷.png
+- 레포트_수정.doc + 첨부파일.zip + 스크린샷.png
+- 레포트.doc + 첨부파일_수정.zip + 스크린샷_수정.png
+- 레포트_수정.doc + 첨부파일_수정_최종.zip + 스크린샷.png
+
+
+이전 버전 관리 시스템
+- CVS
+- SVN(Sub Version)
+- Git
+
+
+Git 학습 곡선
+- 학습 난이도가 높다.
+- 간단한 개인 작업 or 토이 프로젝트 > Git 적용 > 되려 프로젝트 어려워진다.
+- 복잡하고 규모가 큰 프로젝트 > Git 적용 > 프로젝트 난이도가 낮아진다.
+
+
+Git 설정
+
+1. 사용자 정보 등록하기
+
+$ git config --global user.name <이름>
+$ git config --global user.email <이메일>
+
+$ git config --global user.name <Github 계정명>
+$ git config --global user.email <GitHub 계정 이메일>
+
+$ git config --global user.name pinn.public
+$ git config --global user.email pinn.public@gmail.com
+
+Bash 단축키
+- Shift + Ins > 붙여넣기
+- Ctrl + Ins > 복사하기
+
+
+2. 기본 브랜치명 바꾸기
+$ git config --global init.defaultBranch main //변경
+
+$ git config --global init.defaultBranch main //확인하기
+
+
+3. 엔터 설정하기
+- 협업 > 윈도우 사용자 + 맥 사용자
+      > 윈도우(\r\n), 맥/리눅스(\n)
+- Git > 커밋 발생 > 모든 엔터를 \n으로 변환(윈도우 사용자)
+      > 체크아웃(다운로드) > 다시 \r\n으로 변환(윈도우 사용자)
+
+$ git config --global core.autocrlf true //설정
+$ git config --global core.autocrlf //확인하기
+
+
+4. Git Bash에서 한글이 깨질 때
+
+$ git config --global core.quotepath false
+
+
+
+Git 공간 구조
+
+1. Working Directory
+    - 우리가 사용하는 일반 폴더(워크 스페이스 역할)
+    a. untrackted
+    b. tracked
+
+2. Staging area(= Index영역)
+    - 커밋을 위한 준비 영역
+
+3. Repository
+    - 버전을 관리하는 영역
+
+
+
+목적!!
+- 내가 파일/폴더 > 원하는 작업 > 중간 중간마다 백업
+
+Git의 도움을 받아서 버전 관리를 하려면..
+- 작업 중인 폴더 > Git Repository로 선언
+- Git Repository 초기화
+
+$ git init
+
+# Initialized empty Git repository in C:/Users/user/Downloads/code/git/.git/
+# .git 폴더가 생김 > 저장소의 역할
+
+
+현재 상태
+
+$ git status
+
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        필기.txt
+
+Git에 의해서 추적되지 않는 파일:
+        필기.txt
+        프로젝트.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+기본적으로 모든 파일/폴더는 Git 관리 대상이 된다.
+- 예외되는 파일/폴더는 따로 비관리 대상으로 처리
+
+Git에게 추적되면 안되는 파일/폴더들을
+- 포함할 필요가 없는 경우
+    ex) 빌드 결과물, 라이브러리 등.. *.jar
+
+- 포함되면 절대 안되는 경우
+    ex) 보안 관련 파일 등..
+
+.gitignore 작성
+- 특정파일: test.txt
+- 특정폴더: /dir/
+- 특정확장자파일: *.jar
+- 특정폴더+파일: /dir/*.txt
+
+
+
+버전 만들기
+1. 버전에 포함될 파일을 추가하기 > 스테이징
+2. 버전 만들기
+
+
+"요구사항".txt
+"순서도".txt
+
+
+
+파일/폴더 > Git의 관리 대상으로 만들려면..
+
+$ git add 프로젝트.txt
+$ git add 순서도.txt
+$ git add 요구사항.txt
+
+
+선별된 파일을 목록에서 제거하려면
+
+$ git rm --cached 프로젝트.txt
+$ git rm --cached 순서도.txt
+$ git rm --cached 요구사항.txt
+
+
+모든 파일/폴더를 추가하기
+
+$ git add .
+
+
+.버전(커밋)을 만들기
+- 현재 시점의 상태 > 백업본 만들기
+
+$ git commit
+
+
+
+커밋 이력을 확인하기
+
+$ git log
+
+
+
+커밋 메시지 작성법
+- 커밋 > 의미있는 변화
+        - 단위 작업별 > 커밋 생성
+        - 본인/팀 > 일정한 규칙 생성
+
+
+- 커밋 메시지 권장
+    - 이전 커밋과 현재 커밋의 변화를 알 수 있도록 작성
+
+
+커밋 메시지 구조
+
+<제목(헤더, 필수)>
+
+<본문(선택)>
+
+
+기능 변경
+
+- 로그.txt 기능 추가
+- 순서도.txt 기능 삭제
+
+
+로그.txt 수정
+
+$ git commit
+
+메시지(VIM)
+
+$ git commit -m "메시지"
+
+
+
+내역 확인하기
+
+$ git log
+
+$ git log -p //각 커밋의 변경 내역(diff) 함께 보여준다.
+
+$ git log --oneline
+
+$ git log -n 숫자
+
+diff 프로그램 > 파일 2개를 서로 상태를 비교해주는 프로그램
+
+
+
+1. 저장소 생성하기
+$ git init
+
+2. 파일 생성하기
+- 작업.txt
+
+3. 현재 상태 확인하기
+$ git status
+
+4. 스테이징 명령어 > 백업을 위한 공간으로 파일을 등록
+- Untracked > Tracked + Staging
+- Tracked > 변경 > Staging
+$ git add 작업.txt
+
+5. 커밋하기
+- Stage > (백업) > Repository에 커밋을 생성하기
+$ git commit -m "작업.txt 생성"
+
+6. 상태 확인
+- nothing to commit: 스테이지 영역에 아무것도 없다.
+- working tree clean: 마지막 커밋 후 변화가 아무도 없다.
+$ git status
+
+7. 새 파일 추가하기
+- 색상.txt
+
+8. 상태 확인하기
+$ git status
+
+9. 스테이징
+$ git add 색상.txt
+
+10. 커밋
+$ git commit -m "색상.txt 생성"
+
+11. 작업.txt 수정하기
+
+12. 상태 확인
+$ git status
+
+13. 스테이징
+$ git add 작업.txt
+
+14. 상태 확인
+$ git status
+
+15. 커밋하기
+$ git commit -m "작업.txt 수정"
+
+16. 커밋 내역 확인하기
+$ git log
+
+
+
+브랜치 조작하기
+1. switch(checkout)
+2. merge
+3. rebase
+
+커밋 내역 확인하기
+$ git log --oneline
+
+HEAD(커서) == 현재 시점
+
+
+checkout 명령어
+- 버전(커밋)간 이동하기
+
+$ git log --oneline
+
+$ git checkout <이동할 커밋 ID>
+
+$ git checkout 709f4cf
+
+$ git log --oneline
+
+$ git checkout 80620b3
+
+$ git log --oneline
+
+$ git reflog
+
+$ git checkout c3db191
+
+커밋 만들기: 특정 시간을 기억
+체크아웃: 기억한 시간을 탐험(이동)
+
+
+최신 커밋으로 이동하기
+$git checkout <최신커밋 ID>
+$git checkout main #최신 커밋으로 돌아가기
+
+특정 커밋으로 이동하기
+$git checkout <특정커밋 ID>
+$git checkout HEAD
+$git checkout HEAD^
+$git checkout HEAD^^
+$git checkout HEAD^^^
+$git checkout HEAD~
+$git checkout HEAD~1
+$git checkout HEAD~2
+
+
+새폴더 
+C:\Users\user\Downloads\code\git\bbb
+
+저장소 초기화
+$git init
+
+새파일
+number.txt
+
+커밋
+$ git add number.txt
+
+커밋
+$ git add number.txt
+$ git commit -m "111"
+
+number.txt 수정
+$ git add number.txt
+$ git commit -m "222"
+
+number.txt 수정
+$ git add number.txt
+$ git commit -m "333"
+
+number.txt 수정
+$ git add number.txt
+$ git commit -m "444"
+
+number.txt 수정
+$ git add number.txt
+$ git commit -m "555"
+
+
+
+reset 명령어
+- 과거 시점의 특정 커밋으로 이동해서 > 그 커밋 이후의 모든 커밋을 삭제한다.
+
+$ git reset --hard <커밋 ID> 
+
+$ git reset --hard HEAD
+$ git reset --hard HEAD^
+$ git reset --hard HEAD~
+
+reset 취소하는 방법
+$ git reflog
+$ git reset --hard <커밋 ID> //최악의 경우 되돌릴 수 있지만, 협업시 reset 안쓰는게 안전하다.
+
+
+number.txt 수정 > 여섯
+
+$ git add number.txt
+$ git commit -m "666"
+
+
+
+revert 명령어
+- reset과 비슷한 용도의 명령어
+- 과거 시점의 특정 커밋을 취소하는 역할
+
+$ git revert <취소하려는 ID>
+
+$ git revert <커밋 ID>..<커밋 ID>
+
+
+ccc폴더
+
+$ git init
+
+하나.txt
+
+$ git add .
+$ git commit -m "하나"
+
+둘.txt
+
+$ git add .
+$ git commit -m "둘"
+
+
+
+브랜치, branch
+- 여러가지 작업을 각각 분리시켜 진행/관리하고 
+
+
+브랜치 확인하기
+- 최소 1개 이상의 커밋이 존재해야 브랜치가 존재한다.
+
+$ git branch
+
+"Index.java" //메인 클래스
+
+$ git add .
+$ git commit -m "create Index.java"
+
+$ git branch
+
+//게시판 구현
+$ git branch <브랜치명>
+
+$ git branch board
+
+//브랜치 이동하기
+//1. checkout > 비권장
+//2. switch > 권장
+$ git switch board
+
+board.txt 생성
+
+$ git add .
+$ git commit -m "create Board.java"
+
+$ git switch main
+
+
+//회원 가입 구현
+$ git branch member
+$ git switch member
+
+$ git switch -c member
+
+"Member.java" 생성
+$ git add .
+$ git commit -m "create member.java"
+
+
+브랜치 삭제하기
+
+$ git branch -d <브랜치명>
+
+$ git branch
+
+$ git branch -d board
+$ git branch -D board //강제 삭제
+
+
+
+merge 명령어
+- 서로 다른 두 브랜치의 변경 사항을 하나로 합치는 명령어
+
+1. fast-forward merge
+    - 출동 발생이 안 생김
+    - 속도 빠름, 비용 저렴
+
+2. 3-way merge
+    - 형제끼리 병합
+    - 충돌 발생이 생길 수 있다.(***)
+
+fast-forward merge
+- 원 브랜치에서 분리된 브랜치를 합칠 때
+- 분기된 브랜치에는 변화가 발생(새로운 커밋 발생)
+- 원 브랜치에는 변화가 없는(새로운 커밋 없음)
+
+$ git branch board
+$ git switch board
+
+$ git switch -c board //브랜치 생성과 이동을 동시에
+
+"Board.java"
+
+$ git add .
+$ git commit -m "게시판 생성"
+
+$ git log --oneline
+
+"Command.java"
+
+$ git add .
+$ git commit -m "댓글 기능 생성"
+
+
+$ git merge <합칠 브랜치명> 
+
+$ git switch main
+$ git merge board
+
+$ git branch -d board
+
+
+
+rebase 명령어 //협업시에는 merge를 주력으로 쓰는게 좋다...
+- 브랜치 병합 명령어
+- 브랜치의 base를 재정의하는 명령어
+- 한 브랜치의 커밋들을 다른 브랜치의 최신 커밋 위로 옮기는 명령어
+
+
+
+stash 명령어
+- 현재 작업 중인 변경 사항(아직 커밋 전) > 임시 저장
+
+$ git stash //저장
+
+$ git stash list //목록
+
+$ git stash apply //최신 stash 적용
+$ git stash apply <ID> //특정 stash 적용
+
+$ git stash drop //최신 stash 삭제
+$ git stash drop <ID> //특정 stash 삭제
+
+$ git stash pop //apply + drop
+$ git stash <ID>
+
+
+
+1. checkout > 커밋 이동(읽기 전용으로 쓰는게 좋다... or 브랜치 관리)
+2. reset > 어떤 특정 커밋 이후 ~ 최신 커밋을 삭제
+3. revert > 특정 커밋만 골라서 삭제 + 실제 삭제(X) + 이력 남김(O)
+4. branch > 브랜치 관리
+5. merge > 병합(병렬)
+6. rebase > 병합(직렬)
+7. stash > 커밋화 되지 않은 작업 내용을 임시 저장 + 복구. 작업하다가 다른 브랜치 이동해서 작업해야 할때 씀
+
+
+---------------------------------------------------------------------------------------------------------------------
+GitHub
+
+집 <-> GitHub <-> 강의실
+
+1. 계정 정보 등록
+    - 자격 증명 관리자 > Windows 자격 증명 > 일반 자격 증명
+
+2. PAT 발급(Personal Access Token)
