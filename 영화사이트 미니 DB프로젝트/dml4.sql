@@ -1,0 +1,83 @@
+-- 스텝 (DIRECTOR) DML
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '김도영', DATE '1970-11-05', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '김형협', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '제임스 카메론', DATE '1954-08-16', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '이환', DATE '1979-09-15', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '최우석', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '재러드 부시', DATE '1974-06-12', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '바이런 하워드', DATE '1968-12-26', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '최원섭', DATE '1979-11-01', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '미야자키 하야오', DATE '1941-01-05', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '올리베르 락세', DATE '1982-04-11', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '샘 레이미', DATE '1959-10-23', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '미셸 공드리', DATE '1963-05-08', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '진성문', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '폴 페이그', DATE '1962-09-17', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '장항준', DATE '1969-09-17', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '자오린산', DATE '1975-01-01', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '요하네스 로버츠', DATE '1976-05-24', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '이선명', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '김혜영', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '미키 타카히로', DATE '1974-08-29', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '최신춘', DATE '1986-04-22', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '존 랜도', DATE '1960-07-23', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '릭 자파', DATE '1956-05-08', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '쉐인 샐러노', DATE '1972-11-27', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '아만다 실버', DATE '1963-05-24', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '딜런 콜', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '벤 프록터', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '마저리 심킨', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '오유경', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '곽재민', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '그레이', DATE '1986-12-08', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '김종민', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '이베트 메리노', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '마이클 저키노', DATE '1967-10-10', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '애덤 그린', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '안소니 브레그만', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '스티브 골린', DATE '1955-03-06', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '찰리 카프먼', DATE '1958-11-19', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '엘렌 쿠라스', DATE '1959-07-10', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, BIRTH, GENDER) VALUES (director_seq.nextval, '존 브리온', DATE '1963-12-11', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '발디스 오스카즈도티르', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME) VALUES (director_seq.nextval, '댄 리');
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '멜리사 토스', 2);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '조르주 베르망', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '데이비드 L.부쉘', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '글렌 윌리엄슨', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '황성구', 1);
+INSERT INTO director(DIRECTOR_SEQ, NAME, GENDER) VALUES (director_seq.nextval, '이치조 미사키', 1);
+
+select * from director;
+commit;
+
+
+
+-- 연출
+-- 연출 (DIRECTION) DML
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 1, 1);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 2, 2);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 3, 3);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 4, 4);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 5, 5);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 6, 6);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 6, 7);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 7, 8);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 8, 9);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 9, 10);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 10, 11);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 11, 12);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 12, 13);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 13, 14);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 14, 15);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 15, 16);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 16, 17);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 17, 18);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 18, 19);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 19, 20);
+INSERT INTO DIRECTION (SEQ, MOVIE_SEQ, DIRECTOR_SEQ) VALUES (DIRECTION_SEQ.nextVal, 20, 21);
+
+select * from direction;
+commit;
+
+
