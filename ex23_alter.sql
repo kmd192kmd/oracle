@@ -105,7 +105,7 @@ alter table tblEdit
     modify (name varchar2(27) not null);
 
 alter table tblEdit
-    modify (name varchar2(27) default '임시' not null); --불가능;;
+    modify (name varchar2(27) default '임시' not null);
     
 alter table tblEdit
     modify (name varchar2(27) null);   
@@ -117,7 +117,7 @@ alter table tblEdit
     modify (name number);
 
 update tblEdit set name = null;
-
+select * from tblEdit;
 -- Case 3.4 컬럼명 바꾸기
 alter table tblEdit
     rename column name to item;
