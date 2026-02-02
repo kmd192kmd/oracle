@@ -27,7 +27,7 @@ eXERD, Oracle, sqlDeveloper 등을 이용하여
 
 의 과정으로 진행되었다.
 
-내가 맡은 구역은 user, userReview, expert, ExpertReview의 DDL과 DML 파트였다.
+내가 맡은 구역은 user, userReview, expert, ExpertReview 파트의 DDL과 DML 작성이었다.
 
 이미 만들어져 있는 정보를 역순으로 DB에 구현하려다 보니, 초반에 보이지 않던 컬럼들이 발견되어 수정해야하는 어려움이 있었다.
 
