@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/753f8ecf-bed7-453a-a3b3-0427f3bbb0ce/console.sql" value="753f8ecf-bed7-453a-a3b3-0427f3bbb0ce" />
+    <file url="file://$PROJECT_DIR$/../../../ddl-김.sql" value="753f8ecf-bed7-453a-a3b3-0427f3bbb0ce" />
+    <file url="file://$PROJECT_DIR$/../../../교사 instructor 세부입력(dml).sql" value="753f8ecf-bed7-453a-a3b3-0427f3bbb0ce" />
+    <file url="file://$PROJECT_DIR$/../../../근태종류 ATTENDANCE_TYPE 세부입력(DML).sql" value="753f8ecf-bed7-453a-a3b3-0427f3bbb0ce" />
+    <file url="file://$PROJECT_DIR$/../../../수강생 STUDENT 세부입력(dml) .sql" value="753f8ecf-bed7-453a-a3b3-0427f3bbb0ce" />
+  </component>
+</project>
